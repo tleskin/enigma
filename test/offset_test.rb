@@ -1,6 +1,4 @@
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/emoji'
+require_relative 'test_helper'
 require './lib/offset'
 
 class OffsetTest < Minitest::Test
@@ -14,9 +12,14 @@ class OffsetTest < Minitest::Test
     assert_equal 6, offset.date.length
   end
 
-  def test_it_squares_the_date
+  def test_it_squares_the_date_starting_with_zero
     offset = Offset.new
     assert_equal 918999225, offset.square("030315")
+  end
+
+  def test_it_squares_the_date_not_starting_with_zero
+    offset = Offset.new
+    assert_equal 14475699225, offset.square("120315")
   end
 
   def test_it_gets_rotation_a

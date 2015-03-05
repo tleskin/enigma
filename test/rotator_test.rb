@@ -1,6 +1,4 @@
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/emoji'
+require_relative 'test_helper'
 require './lib/rotator'
 
 class RotatorTest < MiniTest::Test
@@ -40,9 +38,25 @@ class RotatorTest < MiniTest::Test
     assert_equal "a", rotator.rotate_character("a", 30, 9)
   end
 
-  def test_it_rotates_a_character_39_spaces
+  def test_it_rotates_a_character_50_spaces
     rotator = Rotator.new
     assert_equal "l", rotator.rotate_character("a", 30, 20)
+  end
+
+  def test_it_rotates_a_character_two_spaces_with_numbers_starting_with_zero
+    rotator = Rotator.new
+    assert_equal "c", rotator.rotate_character("a", 01, 01)
+  end
+
+  def test_it_rotates_a_character_past_end_of_map_with_offset_starting_with_zero
+    rotator = Rotator.new
+    assert_equal "n", rotator.rotate_character(".", 10, 05)
+  end
+
+
+  def test_it_rotates_a_character_past_end_of_map_with_key_rotation_starting_with_zero
+    rotator = Rotator.new
+    assert_equal "n", rotator.rotate_character(".", 05, 10)
   end
 
 end

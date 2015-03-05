@@ -1,6 +1,4 @@
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/emoji'
+require_relative 'test_helper'
 require './lib/key'
 
 class KeyTest < Minitest::Test

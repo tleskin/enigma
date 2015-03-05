@@ -18,7 +18,7 @@ class Offset
     if date.start_with?("0")
       time = date.slice(1, 5).to_i
     else
-      time = time.to_i
+      time = date.to_i
     end
     time * time
   end
