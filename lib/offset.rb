@@ -1,6 +1,15 @@
 class Offset
 
-  def date
+  attr_accessor :offset_values, :date
+
+
+  def initialize(date = todays_date)
+    @date = date
+    @offset_values = {}
+
+  end
+
+  def todays_date
     time = Time.now
     time = time.strftime("%m%d%y")
   end
@@ -15,19 +24,19 @@ class Offset
   end
 
   def rotation_a(square)
-    square[0,1]
+    @offset_values[:a] = square[0,1].to_i
   end
 
   def rotation_b(square)
-    square[1,1]
+    @offset_values[:b] = square[1,1].to_i
   end
 
   def rotation_c(square)
-    square[2,1]
+    @offset_values[:c] = square[2,1].to_i
   end
 
   def rotation_d(square)
-    square[3,1]
+    @offset_values[:d] = square[3,1].to_i
   end
 
   #take the date
