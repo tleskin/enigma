@@ -39,12 +39,4 @@ class Offset
     @offset_values[:d] = square[3,1].to_i
   end
 
-  #take the date
-  #square it
-  #grab the 4th from the end for the a offset 9
-  #grab the 3th from the end for the b offset 2
-  #grab the 2th from the end for the c offset 2
-  #grab the last number as the d offset       5
-  #918999225
-
 end
