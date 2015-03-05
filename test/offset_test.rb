@@ -11,7 +11,7 @@ class OffsetTest < Minitest::Test
 
   def test_it_takes_in_a_date
     offset = Offset.new
-    assert_equal "030415", offset.date
+    assert_equal 6, offset.date.length
   end
 
   def test_it_squares_the_date
