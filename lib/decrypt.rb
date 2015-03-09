@@ -34,6 +34,6 @@ puts "The decrypted message: #{decrypted_message}"
 
 writer = FileWriter.new
 saved_file = File.join(__dir__, ARGV[1])
-writer.save(saved_file, decrypted_message)
+writer.save(saved_file, decrypted_message.join)
 
 puts "Created '#{ARGV[1]}' with key #{ARGV[2]} and date #{ARGV[3]}"

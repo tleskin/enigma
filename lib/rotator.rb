@@ -39,10 +39,10 @@ class Rotator
     character_map_generator.each_with_index do |character, index|
       if character == letter
         new_rot = rotation - index
-        if new_rot < 0
+        if new_rot <= 0
           grab_character << character_map_generator[new_rot.abs]
         else
-          grab_character << character_map_generator[(39 - new_rot).abs]
+          grab_character << character_map_generator[(39 - new_rot.abs) % 39]
         end
       end
     end

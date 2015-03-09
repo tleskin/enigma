@@ -77,6 +77,16 @@ class RotatorTest < MiniTest::Test
     assert_equal "e", rotator.decrypt_character("1", 23)
   end
 
+  def test_it_decrypts_a_rotation_to_a_char_with_index_zero
+    rotator = Rotator.new
+    assert_equal "a", rotator.decrypt_character("4", 30)
+  end
+
+  def test_it_decrypts_a_rotation_goes_off_edge_of_char_map
+    rotator = Rotator.new
+    assert_equal ",", rotator.decrypt_character("e", 83)
+  end
+
 
 
 
