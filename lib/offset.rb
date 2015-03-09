@@ -5,8 +5,16 @@ class Offset
 
   def initialize(date = todays_date)
     @date = date
-    @offset_values = {}
+    @offset_values = []
+  end
 
+  def return_offset
+    squared = square(@date).to_s
+    rotation_a(squared)
+    rotation_b(squared)
+    rotation_c(squared)
+    rotation_d(squared)
+    @offset_values
   end
 
   def todays_date
@@ -15,6 +23,7 @@ class Offset
   end
 
   def square(date)
+
     if date.start_with?("0")
       time = date.slice(1, 5).to_i
     else
@@ -24,19 +33,19 @@ class Offset
   end
 
   def rotation_a(square)
-    @offset_values[:a] = square[0,1].to_i
+    @offset_values << square[5].to_i
   end
 
   def rotation_b(square)
-    @offset_values[:b] = square[1,1].to_i
+    @offset_values << square[6].to_i
   end
 
   def rotation_c(square)
-    @offset_values[:c] = square[2,1].to_i
+    @offset_values << square[7].to_i
   end
 
   def rotation_d(square)
-    @offset_values[:d] = square[3,1].to_i
+    @offset_values << square[8].to_i
   end
 
 end
