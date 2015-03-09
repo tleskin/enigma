@@ -7,7 +7,3 @@ def load(file)
   end
   end
 end
-
-#
-# hand = file.opnen(file)
-# lines = handle.readlines(file).join.strip
