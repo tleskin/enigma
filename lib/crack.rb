@@ -5,16 +5,12 @@ require_relative 'parser'
 require_relative 'writer'
 require 'pry'
 
-
-
   parser = Parser.new
   path = File.join(__dir__, ARGV[0])
   parser.load(path)
 
   message_to_decrypt = parser.message.split("")
   @decrypted_message = message_to_decrypt.join
-
-  #puts "this is the #{@decrypted_message}"
 
   until @decrypted_message[-7..-1] == "..end.."
 
@@ -38,7 +34,7 @@ require 'pry'
     end
 
     @decrypted_message = new_message.join
-    #puts "this is the #{@decrypted_message}"
+
   end
 
   writer = FileWriter.new
