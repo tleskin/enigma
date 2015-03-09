@@ -1,27 +1,10 @@
 require_relative 'rotator'
 require_relative 'offset'
 require_relative 'key'
+require_relative 'writer'
+require_relative 'parser'
 require 'pry'
 
-class Parser
-  attr_accessor :message
-
-  def load(file)
-    File.readlines(file).each do |line|
-      self.message = line.to_s.chomp
-    end
-  end
-end
-
-class FileWriter
-  def save(filename, encrypted_message)
-    File.open(filename, "w") do |file|
-      file.puts " #{encrypted_message}"
-    end
-  end
-end
-
-#this is the document parser
 parser = Parser.new
 path = File.join(__dir__, ARGV[0])
 parser.load(path)

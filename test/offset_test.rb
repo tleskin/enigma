@@ -46,9 +46,9 @@ class OffsetTest < Minitest::Test
     assert_equal [5], offset.offset_values
   end
 
-  def test_it_gets_returns_array_of_offsets
+  def test_it_gets_returns_array_of_offsets_with_4_elements
     offset = Offset.new
-    assert_equal [5, 2, 2, 5], offset.return_offset2
+    assert_equal 4, offset.return_offset.length
   end
-
+4
 end

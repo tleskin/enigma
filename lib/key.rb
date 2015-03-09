@@ -4,8 +4,9 @@ class Key
 
   attr_accessor :key_rotation, :key
 
-  def initialize
+  def initialize(key = generate_key)
     @key_rotation = []
+    @key = key
   end
 
   def generate_key
@@ -17,7 +18,7 @@ class Key
   end
 
   def generate_key_rotations
-    @key = generate_key
+    @key
     n = 0
     4.times do
      @key_rotation << (@key[n].to_s + @key[n+1].to_s).to_i

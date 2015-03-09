@@ -9,54 +9,78 @@ class RotatorTest < MiniTest::Test
 
   def test_it_generates_a_character_map
     rotator = Rotator.new
-    assert_equal (["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",0,1,2,3,4,5,6,
-      7, 8, 9," ",".",","]), rotator.character_map_generator
+    assert_equal 39, rotator.character_map_generator.length
   end
 
   def test_it_rotates_a_character
     rotator = Rotator.new
-    assert_equal "v", rotator.rotate_character("a", 12, 9)
+    assert_equal "b", rotator.rotate_character("a", 1)
   end
 
   def test_it_rotates_a_space
     rotator = Rotator.new
-    assert_equal "c", rotator.rotate_character(" ", 3, 2)
+    assert_equal "c", rotator.rotate_character(" ", 5)
   end
 
   def test_it_rotates_a_zero
     rotator = Rotator.new
-    assert_equal ".", rotator.rotate_character(0, 5, 6)
+    assert_equal ".", rotator.rotate_character("0", 11)
   end
 
   def test_it_rotates_a_comma
     rotator = Rotator.new
-    assert_equal "b", rotator.rotate_character(",", 1, 1)
+    assert_equal "b", rotator.rotate_character(",", 2)
   end
 
   def test_it_rotates_a_character_39_spaces
     rotator = Rotator.new
-    assert_equal "a", rotator.rotate_character("a", 30, 9)
+    assert_equal "a", rotator.rotate_character("a", 39)
   end
 
   def test_it_rotates_a_character_50_spaces
     rotator = Rotator.new
-    assert_equal "l", rotator.rotate_character("a", 30, 20)
+    assert_equal "l", rotator.rotate_character("a", 50)
   end
 
   def test_it_rotates_a_character_two_spaces_with_numbers_starting_with_zero
     rotator = Rotator.new
-    assert_equal "c", rotator.rotate_character("a", 01, 01)
+    assert_equal "c", rotator.rotate_character("a", 2)
   end
 
   def test_it_rotates_a_character_past_end_of_map_with_offset_starting_with_zero
     rotator = Rotator.new
-    assert_equal "n", rotator.rotate_character(".", 10, 05)
+    assert_equal "n", rotator.rotate_character(".", 15)
   end
 
-
-  def test_it_rotates_a_character_past_end_of_map_with_key_rotation_starting_with_zero
+  def test_it_decrypts_a_character
     rotator = Rotator.new
-    assert_equal "n", rotator.rotate_character(".", 05, 10)
+    assert_equal "z", rotator.decrypt_character("9", 10)
   end
+
+  def test_it_decrypts_another_character
+    rotator = Rotator.new
+    assert_equal "j", rotator.decrypt_character("a", 30)
+  end
+
+  def test_it_decrypts_a_space
+    rotator = Rotator.new
+    assert_equal "z", rotator.decrypt_character(" ", 50)
+  end
+
+  def test_it_decrypts_a_number
+    rotator = Rotator.new
+    assert_equal "x", rotator.decrypt_character("4", 7)
+  end
+
+  def test_it_decrypts_something_else
+    rotator = Rotator.new
+    assert_equal "e", rotator.decrypt_character("1", 23)
+  end
+
+
+
+
+
+
 
 end

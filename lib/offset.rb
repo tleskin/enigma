@@ -2,7 +2,6 @@ class Offset
 
   attr_accessor :offset_values, :date
 
-
   def initialize(date = todays_date)
     @date = date
     @offset_values = []
