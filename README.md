@@ -12,7 +12,7 @@ For the encryption, decryption and cracking, four letters are rotated at a time,
 
 To encrypt, run the encrypt.rb file along with two command line arguments, the text file holding the message and the text file to hold the encrypted message.
 
-[Imgur](http://i.imgur.com/e2perOK.png)
+[img]http://i.imgur.com/e2perOK.png[/img]
 
 To to decrypt, run the decrypt.rb file along with four command line arguments, including the text file holding the encrypted, the text file to hold the decrypted message, the key and the date used.
 
