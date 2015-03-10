@@ -48,6 +48,4 @@ class Rotator
     end
     grab_character[0]
   end
-
-
 end

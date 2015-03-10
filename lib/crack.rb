@@ -8,7 +8,6 @@ require 'pry'
 parser = Parser.new
 path = File.join(__dir__, ARGV[0])
 parser.load(path)
-
 message_to_decrypt = parser.message.split("")
 @decrypted_message = message_to_decrypt.join
 

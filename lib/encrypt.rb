@@ -24,7 +24,7 @@ total_rotation = rotator.calculate_total_rotation(key_rotation, offset_rotation)
 rotations_for_every_letter = rotator.rotations_to_add(message_to_encrypt)
 
 pairs = rotator.generate_letter_rotation_pairs(total_rotation, rotations_for_every_letter, message_to_encrypt)
-
+puts "#{pairs}"
 
 encrypted_message = pairs.map do |pair|
   rotator.rotate_character(pair[0], pair[1])
