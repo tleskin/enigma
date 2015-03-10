@@ -34,7 +34,7 @@ require 'pry'
     end
 
     @decrypted_message = new_message.join
-
+    #puts "This is the current #{@decrypted_message}"
   end
 
   writer = FileWriter.new

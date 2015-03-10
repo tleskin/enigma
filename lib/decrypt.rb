@@ -24,13 +24,12 @@ total_rotation = rotator.calculate_total_rotation(key_rotation, offset_rotation)
 all_rots = rotator.rotations_to_add(message)
 
 pairs = rotator.generate_letter_rotation_pairs(total_rotation, all_rots, message)
-puts "The pairs: #{pairs}"
+
 
 decrypted_message = pairs.map do |pair|
   rotator.decrypt_character(pair[0], pair[1])
 end
 
-puts "The decrypted message: #{decrypted_message}"
 
 writer = FileWriter.new
 saved_file = File.join(__dir__, ARGV[1])
