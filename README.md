@@ -15,6 +15,12 @@ To encrypt, run the encrypt.rb file along with two command line arguments, the t
 
 ![img](http://i.imgur.com/e2perOK.png "Encrypt")
 
-To to decrypt, run the decrypt.rb file along with four command line arguments, including the text file holding the encrypted, the text file to hold the decrypted message, the key and the date used.
+To decrypt, run the decrypt.rb file along with four command line arguments, including the text file holding the encrypted message, the text file to hold the decrypted message, the key and the date used.
 
-[Imgur](http://i.imgur.com/Mpt68TI.png)
+![img](http://i.imgur.com/Mpt68TI.png "Decrypt")
+
+To crack the message, run the crack.rb file along with three command line arguments, including the text file holding the encrypted message, the text file to hold the cracked message and the date used when the message was transmitted.
+
+![img](http://i.imgur.com/2FMBK01.png "Crack")
+
+This project was completed as a project at the Turing School of Software & Design. For more information, visit http://tutorials.jumpstartlab.com/projects/enigma.html.
