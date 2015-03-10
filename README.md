@@ -10,16 +10,22 @@ Also considered in the encryption is the date of message transmission, which mak
 
 For the encryption, decryption and cracking, four letters are rotated at a time, either backwards or forwards depending upon the method being used.
 
+####Encryption
+
 To encrypt, run the encrypt.rb file along with two command line arguments, the text file holding the message and the text file to hold the encrypted message.
 
 
 ![img](http://i.imgur.com/e2perOK.png "Encrypt")
+
+####Decryption
 
 To decrypt, run the decrypt.rb file along with four command line arguments, including the text file holding the encrypted message, the text file to hold the decrypted message, the key and the date used.
 
 ![img](http://i.imgur.com/Mpt68TI.png "Decrypt")
 
 To crack the message, run the crack.rb file along with three command line arguments, including the text file holding the encrypted message, the text file to hold the cracked message and the date used when the message was transmitted.
+
+####Cracking
 
 ![img](http://i.imgur.com/2FMBK01.png "Crack")
 
