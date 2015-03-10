@@ -23,4 +23,4 @@ To crack the message, run the crack.rb file along with three command line argume
 
 ![img](http://i.imgur.com/2FMBK01.png "Crack")
 
-This project was completed as a project at the Turing School of Software & Design. For more information, visit http://tutorials.jumpstartlab.com/projects/enigma.html.
+This project was completed as part of the curriculum at the [Turing School of Software & Design](http://turing.io/). For more information, visit http://tutorials.jumpstartlab.com/projects/enigma.html.
