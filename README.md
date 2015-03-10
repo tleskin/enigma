@@ -23,9 +23,9 @@ To decrypt, run the decrypt.rb file along with four command line arguments, incl
 
 ![img](http://i.imgur.com/Mpt68TI.png "Decrypt")
 
-To crack the message, run the crack.rb file along with three command line arguments, including the text file holding the encrypted message, the text file to hold the cracked message and the date used when the message was transmitted.
-
 ####Cracking
+
+To crack the message, run the crack.rb file along with three command line arguments, including the text file holding the encrypted message, the text file to hold the cracked message and the date used when the message was transmitted.
 
 ![img](http://i.imgur.com/2FMBK01.png "Crack")
 
