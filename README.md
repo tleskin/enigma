@@ -1,6 +1,6 @@
 # Enigma
 
-By Tom Leskin
+##By Tom Leskin
 
 Enigma is an encryption engine for encrypting, decrypting, and cracking messages. It does encryption based on rotation and has a character map made up of all the lowercase letters a to z, then the numbers 0 to 9, then space, period and comma. New lines will not appear in the message nor character map.
 
